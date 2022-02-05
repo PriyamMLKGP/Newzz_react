@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Newzz_react/static/css/main.073c9b0a.css",
-    "main.js": "/Newzz_react/static/js/main.b4613a15.js",
-    "static/js/787.4c026eef.chunk.js": "/Newzz_react/static/js/787.4c026eef.chunk.js",
-    "static/media/myimage.jpeg": "/Newzz_react/static/media/myimage.fcecf45070c203b12015.jpeg",
-    "static/media/loading.gif": "/Newzz_react/static/media/loading.f5825c0051d4c7837447.gif",
-    "index.html": "/Newzz_react/index.html",
-    "main.073c9b0a.css.map": "/Newzz_react/static/css/main.073c9b0a.css.map",
-    "main.b4613a15.js.map": "/Newzz_react/static/js/main.b4613a15.js.map",
-    "787.4c026eef.chunk.js.map": "/Newzz_react/static/js/787.4c026eef.chunk.js.map"
+    "main.css": "/react_app_newzz/static/css/main.073c9b0a.css",
+    "main.js": "/react_app_newzz/static/js/main.b8132448.js",
+    "static/js/787.4c026eef.chunk.js": "/react_app_newzz/static/js/787.4c026eef.chunk.js",
+    "static/media/myimage.jpeg": "/react_app_newzz/static/media/myimage.fcecf45070c203b12015.jpeg",
+    "static/media/loading.gif": "/react_app_newzz/static/media/loading.f5825c0051d4c7837447.gif",
+    "index.html": "/react_app_newzz/index.html",
+    "main.073c9b0a.css.map": "/react_app_newzz/static/css/main.073c9b0a.css.map",
+    "main.b8132448.js.map": "/react_app_newzz/static/js/main.b8132448.js.map",
+    "787.4c026eef.chunk.js.map": "/react_app_newzz/static/js/787.4c026eef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.b4613a15.js"
+    "static/js/main.b8132448.js"
   ]
 }
