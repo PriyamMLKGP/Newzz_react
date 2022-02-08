@@ -41,14 +41,16 @@ export class News extends Component {
     this.state = {
       articles: this.articles,
       totalResults:0,
-      page: 1
+      page: 1,
+      count:0
     }
     document.title=this.props.category.slice(0,1).toUpperCase()+this.props.category.slice(1) +'-Newzz';
   }
   //async makes the function wait till await is completed
   fetchit = async () => {
+    this.props.setstate(10);
     //here `` is used to enter variable also $ is added for variable in link
-    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=56f355a7dd9c4175b70e63453228d7d4&page=${this.state.page}&pageSize=${this.props.pagesize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ce371018edc442d68cba28d77bd025ce&page=${this.state.page}&pageSize=${this.props.pagesize}`;
     //below is request to update state variables
     let fetching = await fetch(url);//fetches the url 
     this.props.setstate(100);
@@ -56,16 +58,17 @@ export class News extends Component {
     // console.log(parsed_data);//just viewing the object
     this.setState({
       articles: this.state.articles.concat(parsed_data.articles),
-      totalResults:parsed_data.totalResults
+      totalResults:parsed_data.totalResults,
+      count:1
     })
   }
   //this function is called only when the component is mounted
   // basically after one cycle of rendering
-  async componentDidMount() {
-    //this.props.setstate(10);
-    this.fetchit();
-    this.props.setstate(30);
-  }
+  // async componentDidMount() {
+  //   //this.props.setstate(10);
+  //   this.fetchit();
+  //   this.props.setstate(30);
+  // }
   fetchMoreData=async ()=>
   {
     this.setState({ page: this.state.page + 1 });
@@ -94,8 +97,8 @@ export class News extends Component {
         <InfiniteScroll
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
-          hasMore={this.state.articles.length!==this.state.totalResults}
-          loader={<Loading className="hello"/>}
+          hasMore={this.state.articles.length!==this.totalResults}
+          loader={<Loading/>}
         >
         <div className='container'>
         <div className='row my-3'>
@@ -108,6 +111,7 @@ export class News extends Component {
         })}</div>
         </div>
         </InfiniteScroll></div>
+
       {/* below is bootstrap flex property to get the tags side by side */}
       {/* <div className='container d-flex justify-content-between'>
         {/* below we took the disabled, hidden to make it better */}

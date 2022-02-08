@@ -18,7 +18,7 @@ export default class App extends Component {
     progress:0
   }
   // I havent used below but i can use to make use of env variable, i also need to reload before
-  apikey=process.env.REACT_APP_NEWS_API;
+  // apikey=process.env.REACT_APP_NEWS_API;
   
   setProgress=(progress)=>{
     this.setState({progress:progress})
